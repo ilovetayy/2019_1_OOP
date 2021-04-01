@@ -48,8 +48,8 @@ public class Student {
 	}
 	
 	public String toString() {
-		return "ÀÌ¸§: "+name+"  ÇĞ¹ø: "+StudentNumber+"\n±¹¾î: "+Grade(Korean)
-				+" ¼öÇĞ: "+Grade(Math)+"  ¿µ¾î: "+Grade(English)+"\nÆò±Õ"+Avg+"\n";
+		return "ì´ë¦„: "+name+"  í•™ë²ˆ: "+StudentNumber+"\nêµ­ì–´: "+Grade(Korean)
+				+" ìˆ˜í•™: "+Grade(Math)+"  ì˜ì–´: "+Grade(English)+"\ní‰ê· "+Avg+"\n";
 	}
 	
 	public String Grade(int grade) {
