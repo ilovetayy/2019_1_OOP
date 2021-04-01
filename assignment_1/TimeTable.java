@@ -1,9 +1,9 @@
 package Assignment_1;
 
 public class TimeTable {
-	//classTypeÀÌ SubjectÀÎ ÀÌÂ÷¿ø¹è¿­ timeTable_arr: 10Çà, 5¿­
+	//classTypeì´ Subjectì¸ ì´ì°¨ì›ë°°ì—´ timeTable_arr: 10í–‰, 5ì—´
 	private Subject[][] timeTable_arr = new Subject[10][5];
-	//default »ı¼ºÀÚ
+	//default ìƒì„±ì
 	public TimeTable() {
 		initialize();
 	}
@@ -13,11 +13,11 @@ public class TimeTable {
 			for(int j=0;j<5;j++) {
 				if(i==2) {
 					timeTable_arr[i][j] = new Subject("BREAK");
-					//¸ğµç ¿äÀÏÀÇ 3±³½Ã´Â ½¬´Â½Ã°£
+					//ëª¨ë“  ìš”ì¼ì˜ 3êµì‹œëŠ” ì‰¬ëŠ”ì‹œê°„
 				}
 				else if(i==6) {
 					timeTable_arr[i][j] = new Subject("LUNCH");
-					//¸ğµç¿äÀÏÀÇ 7±³½Ã´Â Á¡½É½Ã°£
+					//ëª¨ë“ ìš”ì¼ì˜ 7êµì‹œëŠ” ì ì‹¬ì‹œê°„
 				}
 				else{
 					timeTable_arr[i][j] = new Subject("----");
@@ -26,9 +26,9 @@ public class TimeTable {
 		}
 	}
 	/**
-	 * timeTable_arrÀÇ ¿­(¿äÀÏ)¿¡ ÀÎµ¦½º·Î Á¢±ŞÇÒ ¼ö ÀÖµµ·Ï ÇÏ´Â method
+	 * timeTable_arrì˜ ì—´(ìš”ì¼)ì— ì¸ë±ìŠ¤ë¡œ ì ‘ê¸‰í•  ìˆ˜ ìˆë„ë¡ í•˜ëŠ” method
 	 * @param day
-	 * @return ¿ù¿äÀÏºÎÅÍ ±İ¿äÀÏ±îÁö: 0ºÎÅÍ 4±îÁö
+	 * @return ì›”ìš”ì¼ë¶€í„° ê¸ˆìš”ì¼ê¹Œì§€: 0ë¶€í„° 4ê¹Œì§€
 	 */
 	private int getNumByDay(String day) {
 		if(day.equals("MON")) {
@@ -46,10 +46,10 @@ public class TimeTable {
 		}
 	}
 	/**
-	 * ¿äÀÏ°ú ±³½Ã¸¦ ÀÔ·Â¹Ş¾Æ ÇØ´ç Subject¸¦ ¸®ÅÏÇÏ´Â method
-	 * @param day(¿äÀÏ)
-	 * @param period(±³½Ã)
-	 * @return ÇØ´ç Subject
+	 * ìš”ì¼ê³¼ êµì‹œë¥¼ ì…ë ¥ë°›ì•„ í•´ë‹¹ Subjectë¥¼ ë¦¬í„´í•˜ëŠ” method
+	 * @param day(ìš”ì¼)
+	 * @param period(êµì‹œ)
+	 * @return í•´ë‹¹ Subject
 	 */
 	public Subject getSchedule(String day, int period) {
 		if(getNumByDay(day) == -1 || period > 10 || period < 1) {
@@ -59,8 +59,8 @@ public class TimeTable {
 		}
 	}
 	/**
-	 * °ú¸ñÀÇÀÌ¸§ÀÌ ---- break lunch °¡ ¾Æ´Ñ ¸ğµç °ú¸ñÀ» ´ãÀº subject ¹è¿­À» ¸®ÅÏÇÏ´Â method
-	 * @return Subject¹è¿­
+	 * ê³¼ëª©ì˜ì´ë¦„ì´ ---- break lunch ê°€ ì•„ë‹Œ ëª¨ë“  ê³¼ëª©ì„ ë‹´ì€ subject ë°°ì—´ì„ ë¦¬í„´í•˜ëŠ” method
+	 * @return Subjectë°°ì—´
 	 */
 	public Subject[] getAllSubjects(){
 		Subject[] subjects = new Subject[40];
@@ -78,9 +78,9 @@ public class TimeTable {
 		return subjects;
 	}
 	/**
-	 * titleÀ» ¹Ş¾Æ¼­ ÀÌ¿¡ ÇØ´çÇÏ´Â ÀÌ¸§ÀÌ ÀÖ´Â Subject¸¦ ¸®ÅÏÇÏ´Â method
+	 * titleì„ ë°›ì•„ì„œ ì´ì— í•´ë‹¹í•˜ëŠ” ì´ë¦„ì´ ìˆëŠ” Subjectë¥¼ ë¦¬í„´í•˜ëŠ” method
 	 * @param title
-	 * @return titleÀÌ ÀÌ¸§ÀÎ Subject, ¸øªFÀ¸¸é null ¸®ÅÏ
+	 * @return titleì´ ì´ë¦„ì¸ Subject, ëª»Fìœ¼ë©´ null ë¦¬í„´
 	 */
 	public Subject getSubjectByTitle(String title) {
 		for(int i=0;i<10;i++) {
@@ -93,13 +93,13 @@ public class TimeTable {
 		return null;
 	}
 	/**
-	 * °ú¸ñÀÇ Á¤º¸¸¦ ÀÔ·Â¹Ş¾Æ °ú¸ñÀ» Ãß°¡ÇÏ´Â method
-	 * @param day(¿äÀÏ)
-	 * @param period(±³½Ã)
-	 * @param name(ÀÌ¸§)
-	 * @param tutor(±³¼ö)
-	 * @param room(°­ÀÇ½Ç)
-	 * @return ½¬´Â ½Ã°£ÀÌ³ª Á¡½É½Ã°£À» ÀÎÀÚ·Î ¹ŞÀ¸¸é return false, ¾Æ´Ï¸é °ú¸ñ Ãß°¡ ÈÄ return true
+	 * ê³¼ëª©ì˜ ì •ë³´ë¥¼ ì…ë ¥ë°›ì•„ ê³¼ëª©ì„ ì¶”ê°€í•˜ëŠ” method
+	 * @param day(ìš”ì¼)
+	 * @param period(êµì‹œ)
+	 * @param name(ì´ë¦„)
+	 * @param tutor(êµìˆ˜)
+	 * @param room(ê°•ì˜ì‹¤)
+	 * @return ì‰¬ëŠ” ì‹œê°„ì´ë‚˜ ì ì‹¬ì‹œê°„ì„ ì¸ìë¡œ ë°›ìœ¼ë©´ return false, ì•„ë‹ˆë©´ ê³¼ëª© ì¶”ê°€ í›„ return true
 	 */
 	public boolean setSchedule(String day, int period, String name, String tutor, String room) {
 		if(period == 3 || period == 7 || getNumByDay(day) == -1 || period > 10 || period < 1) {
@@ -111,7 +111,7 @@ public class TimeTable {
 		}
 	}
 	/**
-	 * ½Ã°£Ç¥¸¦ Ãâ·ÂÇÏ´Â method
+	 * ì‹œê°„í‘œë¥¼ ì¶œë ¥í•˜ëŠ” method
 	 */
 	public void printTimeTable() {
 		System.out.println("\tMON\tTUE\tWED\tTHU\tFRI");
