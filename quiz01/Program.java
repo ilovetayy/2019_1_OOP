@@ -10,20 +10,20 @@ public class Program {
 		String Name;
 		int K, M, E;
 		
-		System.out.print("ÇĞ»ı¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
+		System.out.print("í•™ìƒìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ");
 		int StudentNum = scanner.nextInt();
 		scanner.nextLine();
 		
 		Student[] StudentList = new Student[StudentNum];
 		
 		for(int i=0;i<StudentList.length;i++) {
-			System.out.print("ÇĞ»ı ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä: ");
+			System.out.print("í•™ìƒ ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”: ");
 			Name = scanner.nextLine();
-			System.out.print("±¹¾î ¼ºÀûÀ» ÀÔ·ÂÇÏ¼¼¿ä: ");
+			System.out.print("êµ­ì–´ ì„±ì ì„ ì…ë ¥í•˜ì„¸ìš”: ");
 			K = scanner.nextInt();
-			System.out.print("¼öÇĞ ¼ºÀûÀ» ÀÔ·ÂÇÏ¼¼¿ä: ");
+			System.out.print("ìˆ˜í•™ ì„±ì ì„ ì…ë ¥í•˜ì„¸ìš”: ");
 			M = scanner.nextInt();
-			System.out.print("¿µ¾î ¼ºÀûÀ» ÀÔ·ÂÇÏ¼¼¿ä: ");
+			System.out.print("ì˜ì–´ ì„±ì ì„ ì…ë ¥í•˜ì„¸ìš”: ");
 			E = scanner.nextInt();
 			scanner.nextLine();
 			
