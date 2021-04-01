@@ -4,7 +4,7 @@ import java.util.Random;
 public class Diesel extends Oil{
 	Random rand = new Random();
 	
-	private int price;//°ø±Þ°¡
+	private int price;//Â°Ã¸Â±ÃžÂ°Â¡
 	private double VAT;
 	private double envTax;
 	
