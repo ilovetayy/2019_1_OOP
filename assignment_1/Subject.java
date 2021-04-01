@@ -16,8 +16,8 @@ public class Subject {
 		room = "null";
 	}
 	/**
-	 * º¹»ç»ı¼ºÀÚ(deep copy)
-	 * @param ´Ù¸¥ Subject°´Ã¼
+	 * ë³µì‚¬ìƒì„±ì(deep copy)
+	 * @param ë‹¤ë¥¸ Subjectê°ì²´
 	 */
 	public Subject(Subject another) {
 		name = another.name;
@@ -43,8 +43,8 @@ public class Subject {
 		this.room = room;
 	}
 	/**
-	 * ¼­·Î ´Ù¸¥ °´Ã¼ÀÇ ÀÌ¸§À» ºñ±³ÇÏ´Â method
-	 * @param ´Ù¸¥ Subject°´Ã¼
+	 * ì„œë¡œ ë‹¤ë¥¸ ê°ì²´ì˜ ì´ë¦„ì„ ë¹„êµí•˜ëŠ” method
+	 * @param ë‹¤ë¥¸ Subjectê°ì²´
 	 * @return boolean
 	 */
 	public boolean equals(Subject another) {
@@ -55,14 +55,14 @@ public class Subject {
 		}
 	}
 	/**
-	 * SubjectÀÇ ÀÌ¸§À» return
+	 * Subjectì˜ ì´ë¦„ì„ return
 	 */
 	public String toString() {
 		return name;
 	}
 	/**
-	 * SubjectÀÇ ÀÌ¸§, ±³¼ö, °­ÀÇ½Ç Á¤º¸¸¦ ¸®ÅÏÇÏ´Â method
-	 * @return ÀÌ¸§, ±³¼ö, °­ÀÇ½Ç Á¤º¸
+	 * Subjectì˜ ì´ë¦„, êµìˆ˜, ê°•ì˜ì‹¤ ì •ë³´ë¥¼ ë¦¬í„´í•˜ëŠ” method
+	 * @return ì´ë¦„, êµìˆ˜, ê°•ì˜ì‹¤ ì •ë³´
 	 */
 	public String getDetails() {
 		return "Name: "+name+"\nTutor: "+tutor+"\nRoom: "+room;
